@@ -8,7 +8,7 @@ function Add() {
     const [product, setproduct] = useState("");
     const [quantity, setquantity] = useState("");
     const router = useRouter();
-
+const url = "./api" ;
     async function Addproduct() {
         console.log(product, quantity);
 
@@ -19,7 +19,7 @@ function Add() {
                 return;
             }
             else {
-                let createdata = await fetch(`/api`, {
+                let createdata = await fetch(`${url}`, {
                     cache:"no-store",
                     method: "POST",
                     body: JSON.stringify({ product, quantity })
