@@ -19,7 +19,7 @@ function Add() {
                 return;
             }
             else {
-                let createdata = await fetch(`http://localhost:3000/api`, {
+                let createdata = await fetch(`/api`, {
                     cache:"no-store",
                     method: "POST",
                     body: JSON.stringify({ product, quantity })
